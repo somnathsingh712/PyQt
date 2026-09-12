@@ -1,0 +1,17 @@
+QTimer is used to perform periodic operations 
+without blocking the GUI. 
+After the device is connected, 
+the timer can be started with an interval 
+of 1000 milliseconds (1 second). 
+Its timeout signal is connected to a 
+function such as requestReading(). 
+Every second, this function requests 
+or generates a simulated device reading 
+and sends it to the GUI for display. 
+When disconnected, the timer is stopped.
+
+example: 
+
+timer = QTimer()
+timer.timeout.connect(requestReading)
+timer.start(1000)

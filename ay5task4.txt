@@ -1,0 +1,16 @@
+Initially, the device is Offline. 
+When the user clicks Connect, 
+the application changes the state to 
+Connecting and displays “Connecting...” 
+in the status bar. If the connection succeeds, 
+the state changes to Online, 
+the status label is updated, 
+and periodic monitoring starts. 
+If communication fails, the state changes 
+to Error, the status bar displays an appropriate 
+error message, and monitoring is stopped. 
+The user can try connecting again after an error.
+
+Offline → Connecting → Online
+Connecting → Error
+Online → Error/Offline

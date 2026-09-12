@@ -1,0 +1,9 @@
+I would design the application using a QMainWindow as the main GUI.
+The window contains a Connect button, an Online/Offline status label, 
+and a status bar. 
+The Connect button starts communication with the device and changes the status
+label to Online when the connection succeeds. 
+The status bar displays messages such as “Connecting”, 
+“Device Online”, or errors. 
+A backend communication object handles device communication separately
+from the GUI and sends signals to update the interface.

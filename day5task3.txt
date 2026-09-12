@@ -1,0 +1,18 @@
+A separate backend communication class can
+inherit from QObject and define signals 
+such as data_received and error_occurred.
+
+class Backend(QObject):
+    data_received = pyqtSignal(str)
+    error_occurred = pyqtSignal(str)
+
+
+When a device reading is received, 
+the backend emits data_received, 
+which is connected to a GUI slot 
+that updates the display. 
+If communication fails, error_occurred 
+is emitted and the GUI displays the 
+error in the status bar. 
+This signal-slot design keeps communication 
+logic separate from the user interface.

@@ -1,0 +1,16 @@
+When the application starts, 
+QApplication creates the event loop and the 
+QMainWindow is displayed. Initially, 
+the device status is Offline. 
+When the user clicks Connect, 
+the GUI asks the backend to establish 
+communication and displays “Connecting” in the 
+status bar. After successful connection, 
+the status changes to Online and a QTimer 
+starts generating/requesting readings every second.
+The backend emits data_received, which updates 
+the GUI. If an error occurs, error_occurred is 
+emitted, the status becomes Error, and the 
+status bar shows the error message. Thus, user 
+actions, backend signals, timer events, and GUI 
+updates work together without blocking the interface.

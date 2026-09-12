@@ -1,0 +1,11 @@
+TCP is preferred when reliable and ordered delivery
+is required. It establishes a connection, 
+checks errors, retransmits lost packets, 
+and maintains packet order. For example, 
+sending important device configuration or firmware 
+data should use TCP.
+
+UDP is preferred when speed and low latency are more
+important than reliability, such as frequent sensor
+readings or live monitoring where an occasional 
+lost packet is acceptable.
